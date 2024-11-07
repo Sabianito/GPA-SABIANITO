@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPA, Height, and Weight Input</title>
+</head>
+<body>
+    <h2>Enter Your Details</h2>
+    <label>GPA: <input type="number" id="gpa" step="0.01"></label><br><br>
+    <label>Height: <input type="number" id="height" step="0.01"></label><br><br>
+    <label>Weight: <input type="number" id="weight" step="0.01"></label><br><br>
+    <button onclick="displayValues()">Submit</button>
+
+    <h3>Output:</h3>
+    <p>GPA: <span id="outputGPA">[GPA]</span></p>
+    <p>Height: <span id="outputHeight">[Height]</span></p>
+    <p>Weight: <span id="outputWeight">[Weight]</span></p>
+
+    
+    <script>
+        function displayValues() {
+            var gpa = document.getElementById("gpa").value;
+            var height = document.getElementById("height").value;
+            var weight = document.getElementById("weight").value;
+    
+            document.getElementById("outputGPA").textContent = Number(gpa).toFixed(2);
+            document.getElementById("outputHeight").textContent = Number(height).toFixed(2);
+            document.getElementById("outputWeight").textContent = Number(weight).toFixed(2);
+        }
+    </script>
+    
+</body>
+</html>
